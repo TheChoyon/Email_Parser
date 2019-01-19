@@ -14,7 +14,7 @@ mailsFound = []
 with open(input_file) as file_data:
     for line in file_data:
         line = line.lower()
-        li = re.findall('[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+', line)
+        li = re.findall('[a-z0-9._]+@[a-z0-9.-]+', line)
         mailsFound.extend(li)
         li[:] = []
         #save 20000 mails when reached and clear the list to save memory
